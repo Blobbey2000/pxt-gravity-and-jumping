@@ -23,6 +23,19 @@ namespace sprites {
         sprite.vy = jump * -1
     }
 
+    /**
+    * 
+    */
+    //% block="is $sprite able to jump"
+    //% sprite.shadow=variables_get
+    //% sprite.defl=mySprite
+    //% group="Physics"
+    export function isSpriteAbleToJump(sprite: Sprite): boolean {
+        if (sprite.isHittingTile(CollisionDirection.Bottom)) {
+            return true;
+        } else {
+            return false
+        }
+    }
+
 }
-
-
